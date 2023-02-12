@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { contactsSlice } from './contactsSlice';
 import { filterSlice } from './filterSlice';
-import { Logger } from 'logger';
 import {
     persistStore,
     persistReducer,
@@ -33,7 +32,6 @@ export const store = configureStore({
         ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-  Logger,
   devTools: process.env.NODE_ENV === 'development',
 });
 
