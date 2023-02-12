@@ -1,9 +1,9 @@
 import css from '../ContactList/ContactList.module.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { remove } from 'Redux/store';
+import { remove } from 'Redux/contactsSlice';
 
-export const ContactList = ({ contacts, onDelete }) => {
+export const ContactList = ({ contacts }) => {
     const dispatch = useDispatch();
     return (
         <ul className={css.contact__list}>
