@@ -9,7 +9,6 @@ export const App = () => {
 
   const contacts = useSelector(state => state.contacts.items);
   const filter = useSelector(state => state.filter);
-  console.log(contacts);
 
   const normalizedData = filter.toLowerCase();
   const normalizedContacts = contacts.filter(contact =>
