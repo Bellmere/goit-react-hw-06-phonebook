@@ -13,11 +13,6 @@ export const contactsSlice = createSlice({
         },
     reducers: {
         add(state, action) {
-            if (state.items.findIndex(item => item.name?.toLowerCase() === action.payload.name?.toLowerCase()) !== -1) {
-                alert(`${action.payload.name} is already in contacts.`);
-                return state;
-              }
-
               state.items.push(action.payload);
         },
         remove({items}, action) {

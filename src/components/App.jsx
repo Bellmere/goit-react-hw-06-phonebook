@@ -2,18 +2,9 @@
 import { ContactForm } from "./ContactForm/ContactForm";
 import { ContactList } from "./ContactList/ContactList";
 import { Filter } from './Filter/Filter';
-import { useSelector } from 'react-redux';
 
 
 export const App = () => {
-
-  const contacts = useSelector(state => state.contacts.items);
-  const filter = useSelector(state => state.filter);
-
-  const normalizedData = filter.toLowerCase();
-  const normalizedContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(normalizedData)
-  );
 
   return (
     <div
@@ -31,9 +22,7 @@ export const App = () => {
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
-      <ContactList
-      contacts={normalizedContacts}
-      />
+      <ContactList />
     </div>
   );
 }
